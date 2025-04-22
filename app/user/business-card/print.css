@@ -1,0 +1,21 @@
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #business-card,
+  #business-card * {
+    visibility: visible;
+  }
+
+  #business-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 95mm !important;
+    height: 60mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden;
+  }
+}
