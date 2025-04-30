@@ -3,10 +3,10 @@ import { executeQuery } from "@/lib/db"
 
 export async function POST(request: Request) {
   try {
-    // ลบตาราง BusinessCards ถ้ามีอยู่
+    // ลบตาราง business_cards ถ้ามีอยู่
     await executeQuery(
       `
-      DROP TABLE IF EXISTS BusinessCards
+      DROP TABLE IF EXISTS business_cards
     `,
       [],
     )
