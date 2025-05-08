@@ -11,7 +11,8 @@
     "reset-admin": "node scripts/reset-admin-password.js",
     "create-upload-dirs": "node scripts/create-upload-dirs.js",
     "cleanup-images": "node scripts/cleanup-orphaned-images.js",
-    "cleanup-avatars": "node scripts/cleanup-orphaned-avatars.js"
+    "cleanup-avatars": "node scripts/cleanup-orphaned-avatars.js",
+    "plesk-setup": "node scripts/plesk-setup.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.8",

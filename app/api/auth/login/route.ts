@@ -4,6 +4,9 @@ import { cookies } from "next/headers"
 import { sign } from "jsonwebtoken"
 import { createHash } from "crypto"
 
+// เพิ่ม export config เพื่อบอก Next.js ว่านี่เป็น dynamic route
+export const dynamic = 'force-dynamic'
+
 // ฟังก์ชันสำหรับเข้ารหัสรหัสผ่านด้วย SHA-256
 function hashPassword(password: string): string {
   return createHash("sha256").update(password).digest("hex")
@@ -63,7 +66,7 @@ export async function POST(request: Request) {
         email: user.email,
         role: user.role,
       },
-      process.env.JWT_SECRET || "your-secret-key",
+      "your-secret-key", // ใช้ค่า hardcode แทน environment variable
       { expiresIn: "1d" },
     )
 

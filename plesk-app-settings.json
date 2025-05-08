@@ -1,0 +1,20 @@
+{
+  "nodejs": {
+    "enabled": true,
+    "version": "18",
+    "application": {
+      "startup_file": "start.js",
+      "environment_mode": "production",
+      "npm_install_params": "--production",
+      "domains": ["all"],
+      "environment": {
+        "NODE_ENV": "production"
+      },
+      "proxy": {
+        "host": "localhost",
+        "port": 3000,
+        "ssl": false
+      }
+    }
+  }
+}

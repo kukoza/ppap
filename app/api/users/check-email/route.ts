@@ -3,6 +3,9 @@ import { NextResponse } from "next/server"
 import { cookies } from "next/headers"
 import { verify } from "jsonwebtoken"
 
+// เพิ่ม export config เพื่อบอก Next.js ว่านี่เป็น dynamic route
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: Request) {
   try {
     // ตรวจสอบสิทธิ์การเข้าถึง
